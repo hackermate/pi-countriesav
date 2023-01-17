@@ -10,7 +10,7 @@ const getCountries = async () => {
         const apiCountriesResponse = await axios.get(Url);
         var apiCountries = apiCountriesResponse.data.map((e) => {
             return {
-                id: e.cca3
+                id: e.cca3,
                 name: e.name.common,
                 flags: e.flags[0],
                 continent: e.continents[0],
